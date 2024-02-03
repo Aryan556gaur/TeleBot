@@ -25,10 +25,11 @@ load_dotenv()
 
 reference = Reference()
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("TOKEN") # My Token= '6473262990:AAE8Xs5KomblPyFovxV1pzv1zuBEhfgXNX4'
+
 
 #model name
-MODEL_NAME = "karakuri-ai/karakuri-lm-70b-chat-v0.1"
+# MODEL_NAME = "karakuri-ai/karakuri-lm-70b-chat-v0.1"
 
 
 # Initialize bot and dispatcher
@@ -75,18 +76,7 @@ async def helper(message: types.Message):
     I hope this helps. :)
     """
     await message.reply(help_command)
-
-
-# @dispatcher.message_handler()
-# async def echo(message: types.Message):
-#     """
-#     This will retrun echo
-#     """
-#     if message.text.lower() in ["hi", "hello", "how are you", "whats up"]:
-#         reply_text = "Hi! Aryan here... I'm doing well. How about you?"
-#         await message.answer(reply_text)
-#     else:
-#         await message.answer(message.text)
+    
 
 
 @dispatcher.message_handler()
